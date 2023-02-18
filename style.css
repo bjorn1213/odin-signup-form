@@ -20,6 +20,7 @@ html, body {
     background-image: url('assets/mountains.jpg');
     background-color: #7685a0;
     background-size: cover;
+    background-position: bottom;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,14 +50,14 @@ html, body {
     font-size: 15px;
     text-align: center;
     margin: 10px 0;
-    color: #9e9e9e;
+    color: #ccc;
 }
 
 .img-credits > a{
-    color: #9e9e9e;
+    color: #ccc;
 }
 
 .form-content {
     flex: 2;
-    background-color: #ddd;
+    background-color: #eee;
 }
