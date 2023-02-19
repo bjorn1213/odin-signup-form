@@ -11,11 +11,12 @@
 
 :root {
     --invalid-color: #af0202;
+    --general-left-padding: 40px;
 }
 
 html, body {
     height: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #wrapper {
@@ -66,6 +67,17 @@ html, body {
     color: #ccc;
 }
 
+.intro-text {
+    width: 80%;
+    padding: 0 var(--general-left-padding);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro-text > p {
+    padding-top: 40px
+}
+
 .form-content {
     flex: 2;
     background-color: #f4fbff;
@@ -77,8 +89,8 @@ html, body {
 .form-segment {
     background-color: #ffffff;
     margin: 40px 0;
-    padding: 20px 40px;
-    box-shadow: 0 5px 10px black;
+    padding: 20px var(--general-left-padding);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -98,7 +110,6 @@ input:invalid:focus {
 
 input:invalid + span::after {
     content: "This input is required";
-    /* display: block; */
     font-size: 10px;
     color: var(--invalid-color);
     margin: 0;
@@ -121,3 +132,30 @@ input:invalid + span::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.form-footer {
+    padding: 0 var(--general-left-padding);
+}
+
+.form-footer > button {
+    font-size: 20px;
+    padding: 10px 35px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #4b4bff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.form-footer > button:active {
+    box-shadow: inset 3px 2px 9px -3px rgba(0, 0, 0, 0.42);
+    margin: 20px 0;
+}
+
+.form-footer a,
+.form-footer a:visited {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #2525d8;
+}
+
