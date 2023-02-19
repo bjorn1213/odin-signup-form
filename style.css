@@ -9,6 +9,10 @@
     border: 0;
 }
 
+:root {
+    --invalid-color: #af0202;
+}
+
 html, body {
     height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -64,5 +68,56 @@ html, body {
 
 .form-content {
     flex: 2;
-    background-color: #eee;
+    background-color: #f4fbff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-segment {
+    background-color: #ffffff;
+    margin: 40px 0;
+    padding: 20px 40px;
+    box-shadow: 0 5px 10px black;
+}
+
+input {
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px
+}
+
+input:invalid {
+    border: 1px solid var(--invalid-color);
+}
+
+input:invalid:focus {
+    outline: 1px solid var(--invalid-color);
+}
+
+input:invalid + span::after {
+    content: "This input is required";
+    /* display: block; */
+    font-size: 10px;
+    color: var(--invalid-color);
+    margin: 0;
+    padding: 0;
+}
+
+.input-item{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px 10px 0;
+}
+
+.input-item > label {
+    font-variant-caps: all-small-caps;
+}
+
+.form-wrapper {
+    width: 80%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
