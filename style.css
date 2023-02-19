@@ -74,7 +74,7 @@ html, body {
     font-weight: bold;
 }
 
-.intro-text > p {
+.intro-text > p:last-of-type {
     padding-top: 40px
 }
 
