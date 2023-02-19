@@ -1,3 +1,8 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(./assets/fonts/Norse-Bold.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,8 +42,8 @@ html, body {
 }
 
 .title-text {
-    font-size: 70px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 90px;
+    font-family: NorseBold, 'Times New Roman', Times, serif;
     color: #fff;
     padding-right: 100px;
     margin-left: 10px;
