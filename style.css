@@ -100,22 +100,6 @@ input {
     padding: 5px
 }
 
-input:invalid {
-    border: 1px solid var(--invalid-color);
-}
-
-input:invalid:focus {
-    outline: 1px solid var(--invalid-color);
-}
-
-input:invalid + span::after {
-    content: "This input is required";
-    font-size: 10px;
-    color: var(--invalid-color);
-    margin: 0;
-    padding: 0;
-}
-
 .input-item{
     display: flex;
     flex-direction: column;
@@ -148,7 +132,7 @@ input:invalid + span::after {
 }
 
 .form-footer > button:active {
-    box-shadow: inset 3px 2px 9px -3px rgba(0, 0, 0, 0.42);
+    box-shadow: inset 3px 2px 9px -3px rgba(0, 0, 0, 0.60);
     margin: 20px 0;
 }
 
@@ -159,3 +143,42 @@ input:invalid + span::after {
     color: #2525d8;
 }
 
+input:invalid {
+    border: 1px solid var(--invalid-color);
+}
+
+input:invalid:focus {
+    outline: 1px solid var(--invalid-color);
+}
+
+input:invalid + span::after {
+    content: "Invalid input";
+    font-size: 10px;
+    color: var(--invalid-color);
+    margin: 0;
+    padding: 0;
+}
+
+input.error {
+    border: 1px solid var(--invalid-color);
+}
+
+input.error:focus {
+    outline: 1px solid var(--invalid-color);
+}
+
+input.error-required + span::after {
+    content: "This input is required";
+    font-size: 10px;
+    color: var(--invalid-color);
+    margin: 0;
+    padding: 0;
+}
+
+input.error-mismatch + span::after {
+    content: "The passwords do not match";
+    font-size: 10px;
+    color: var(--invalid-color);
+    margin: 0;
+    padding: 0;
+}
